@@ -1,2 +1,67 @@
-# birthday-counter
-for you &lt;3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <section class="header">
+        <pre><h1 class="countdown-container">KIMLANG </h1></pre>
+        <div class="countdown-container">
+        <div class="countdown-el day-c">
+        <p class="big-text" id="days">0</p>
+        <span>days</span>
+    </div> 
+        <div class="countdown-el hours-c">
+        <p class="big-text" id="hours">0</p>
+        <span>hours</span>
+    </div> 
+        <div class="countdown-el mins-c">
+        <p class="big-text" id="mins">0</p>
+        <span>mins</span>
+    </div> 
+        <div class="countdown-el second-c">
+        <p class="big-text" id="seconds">0</p>
+        <span>second</span>
+    </div>    
+ </div>
+ </section>
+ <section class="BMI">
+<span></span>
+    <form action="" method="post" id="MyForm">
+        <div class="row">
+        <span>
+            <label for="weight">weight</label><br><input class="basic-slide" type="number" id="weight" placeholder="0.00kg" required>
+        </span>
+           <span> <label for="height">height</label><br><input class="basic-slide" type="text" id="height" placeholder="0.00m" required>
+        </span><br>
+           <span><label for="volume">your result BMI</label><br><input class="basic-slide" type="number" id="volume" placeholder="your result BMI" >
+        </span><br>
+            <br><input type="submit" value="Calculate" id="submit" class="format-button"> </form>
+            </span>
+        </div>
+            <script>
+        function volume_sphere()
+            {
+             var volume;    
+             var weight = document.getElementById('weight').value;
+             var height = document.getElementById('height').value;
+             var volume = weight / (height**2);
+             var volume = volume.toFixed(4);
+             document.getElementById('volume').value = volume;
+             return false;
+            } 
+           window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+    </script>
+    <b><p>if your result BMI under 18.5, you are underweight.</p>
+    <p>if your result BMI more then 18.5 to 24.9, you are ideal.</p>
+    <p>if your result BMI more then 25 to 29.9, you are overweight.</p>
+    <p>if your result BMI more then 29.9, you are obesity.</p>
+   </b>
+</section>
+</body>
+</html>
